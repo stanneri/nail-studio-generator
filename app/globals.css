@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ─────────────────────────────── */
+:root {
+  --blush:      #F9B8D0;
+  --champagne:  #F5E6C8;
+  --mauve:      #C4768A;
+  --pearl:      #F8F4F0;
+}
+
+/* ─── Base ──────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F4F0;
+  background-image:
+    radial-gradient(ellipse at 15% 10%,  rgba(249, 184, 208, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 85%,  rgba(245, 230, 200, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 15%,  rgba(196, 118, 138, 0.08) 0%, transparent 45%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  z-index: 0;
+}
+
+/* ─── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #F9B8D0; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #C4768A; }
+
+/* ─── Focus ring ────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid #F9B8D0;
+  outline-offset: 2px;
+}
