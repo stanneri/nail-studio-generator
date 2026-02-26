@@ -5,6 +5,8 @@ import NailShapeSelector from './NailShapeSelector'
 import LengthSelector from './LengthSelector'
 import StyleSelector from './StyleSelector'
 import DecorationCheckboxes from './DecorationCheckboxes'
+import ColorPicker from './ColorPicker'
+import FingerSelector from './FingerSelector'
 import LoadingSparkle from './LoadingSparkle'
 import ImageResultPanel from './ImageResultPanel'
 import { NailDesignInput, NailShape, NailLength, NailStyle } from '@/lib/types'
@@ -15,6 +17,7 @@ const INITIAL: NailDesignInput = {
   colors: '',
   style: 'ombre',
   decorations: [],
+  fingers: [],
   details: '',
 }
 
@@ -79,13 +82,9 @@ export default function DesignForm() {
 
         {/* Colors */}
         <Section number="03" title="Värit">
-          <input
-            type="text"
+          <ColorPicker
             value={form.colors}
-            onChange={(e) => set('colors', e.target.value)}
-            placeholder="esim. dusty rose, samppanjakulta, pehmeä nude…"
-            required
-            className="w-full rounded-xl border border-pearl-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none ring-0 placeholder:text-gray-300 transition-all duration-200 focus:border-blush-200 focus:ring-2 focus:ring-blush-100"
+            onChange={(v) => set('colors', v)}
           />
         </Section>
 
@@ -105,12 +104,20 @@ export default function DesignForm() {
           />
         </Section>
 
+        {/* Fingers */}
+        <Section number="06" title="Koristeltavat sormet" optional>
+          <FingerSelector
+            value={form.fingers}
+            onChange={(v) => set('fingers', v)}
+          />
+        </Section>
+
         {/* Details */}
-        <Section number="06" title="Lisätiedot" optional>
+        <Section number="07" title="Lisätiedot" optional>
           <textarea
             value={form.details}
             onChange={(e) => set('details', e.target.value)}
-            placeholder="Lisätoiveet — erityiset kuviot, tilaisuudet, viitteet…"
+            placeholder="Lisätoiveet, kuten erityiset kuviot yms."
             rows={3}
             className="w-full resize-none rounded-xl border border-pearl-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none placeholder:text-gray-300 transition-all duration-200 focus:border-blush-200 focus:ring-2 focus:ring-blush-100"
           />

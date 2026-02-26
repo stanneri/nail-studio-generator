@@ -14,5 +14,6 @@ export interface NailDesignInput {
   colors: string
   style: NailStyle
   decorations: string[]
+  fingers: string[]
   details: string
 }
