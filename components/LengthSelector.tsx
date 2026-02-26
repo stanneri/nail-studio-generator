@@ -1,10 +1,10 @@
 import { NailLength } from '@/lib/types'
 
 const LENGTHS: { value: NailLength; label: string }[] = [
-  { value: 'short',       label: 'Short' },
-  { value: 'medium',      label: 'Medium' },
-  { value: 'long',        label: 'Long' },
-  { value: 'extra long',  label: 'Extra Long' },
+  { value: 'short',       label: 'Lyhyet' },
+  { value: 'medium',      label: 'Keskipitkät' },
+  { value: 'long',        label: 'Pitkät' },
+  { value: 'extra long',  label: 'Erittäin pitkät' },
 ]
 
 interface Props {

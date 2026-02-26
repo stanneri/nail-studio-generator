@@ -25,9 +25,9 @@ export default function LoadingSparkle() {
       {/* Text */}
       <div className="flex flex-col items-center gap-1.5">
         <p className="font-serif text-lg text-mauve-600 animate-pulse-soft">
-          Creating your nail designs
+          Luodaan kynsidesigneja
         </p>
-        <p className="text-sm text-gray-400">This takes about 20 seconds&hellip;</p>
+        <p className="text-sm text-gray-400">Tämä kestää noin 20 sekuntia&hellip;</p>
       </div>
 
       {/* Shimmer bar */}

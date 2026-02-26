@@ -1,12 +1,12 @@
 import { NailShape } from '@/lib/types'
 
 const SHAPES: { value: NailShape; label: string; desc: string }[] = [
-  { value: 'square',   label: 'Square',   desc: 'Straight edge' },
-  { value: 'round',    label: 'Round',    desc: 'Soft curve' },
-  { value: 'oval',     label: 'Oval',     desc: 'Elongated' },
-  { value: 'almond',   label: 'Almond',   desc: 'Tapered tip' },
-  { value: 'stiletto', label: 'Stiletto', desc: 'Sharp point' },
-  { value: 'coffin',   label: 'Coffin',   desc: 'Flat tip' },
+  { value: 'square',   label: 'Neliö',    desc: 'Suora reuna' },
+  { value: 'round',    label: 'Pyöreä',   desc: 'Pehmeä kaari' },
+  { value: 'oval',     label: 'Ovaali',   desc: 'Pitkänomainen' },
+  { value: 'almond',   label: 'Manteli',  desc: 'Kapeneva kärki' },
+  { value: 'stiletto', label: 'Stiletto', desc: 'Terävä kärki' },
+  { value: 'coffin',   label: 'Coffin',   desc: 'Tasainen kärki' },
 ]
 
 interface Props {

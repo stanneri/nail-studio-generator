@@ -45,12 +45,12 @@ export default function DesignForm() {
       const data = await res.json()
 
       if (!res.ok) {
-        throw new Error(data.error || 'Generation failed')
+        throw new Error(data.error || 'Generointi epäonnistui')
       }
 
       setImages(data.images ?? [])
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong')
+      setError(err instanceof Error ? err.message : 'Jokin meni pieleen')
     } finally {
       setLoading(false)
     }
@@ -62,7 +62,7 @@ export default function DesignForm() {
     <div>
       <form onSubmit={handleSubmit} className="space-y-10">
         {/* Shape */}
-        <Section number="01" title="Nail Shape">
+        <Section number="01" title="Kynnen muoto">
           <NailShapeSelector
             value={form.shape}
             onChange={(v: NailShape) => set('shape', v)}
@@ -70,7 +70,7 @@ export default function DesignForm() {
         </Section>
 
         {/* Length */}
-        <Section number="02" title="Length">
+        <Section number="02" title="Pituus">
           <LengthSelector
             value={form.length}
             onChange={(v: NailLength) => set('length', v)}
@@ -78,19 +78,19 @@ export default function DesignForm() {
         </Section>
 
         {/* Colors */}
-        <Section number="03" title="Colours">
+        <Section number="03" title="Värit">
           <input
             type="text"
             value={form.colors}
             onChange={(e) => set('colors', e.target.value)}
-            placeholder="e.g. dusty rose, champagne gold, soft nude…"
+            placeholder="esim. dusty rose, samppanjakulta, pehmeä nude…"
             required
             className="w-full rounded-xl border border-pearl-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none ring-0 placeholder:text-gray-300 transition-all duration-200 focus:border-blush-200 focus:ring-2 focus:ring-blush-100"
           />
         </Section>
 
         {/* Style */}
-        <Section number="04" title="Style">
+        <Section number="04" title="Tyyli">
           <StyleSelector
             value={form.style}
             onChange={(v: NailStyle) => set('style', v)}
@@ -98,7 +98,7 @@ export default function DesignForm() {
         </Section>
 
         {/* Decorations */}
-        <Section number="05" title="Decorations" optional>
+        <Section number="05" title="Koristeet" optional>
           <DecorationCheckboxes
             value={form.decorations}
             onChange={(v) => set('decorations', v)}
@@ -106,11 +106,11 @@ export default function DesignForm() {
         </Section>
 
         {/* Details */}
-        <Section number="06" title="Additional Details" optional>
+        <Section number="06" title="Lisätiedot" optional>
           <textarea
             value={form.details}
             onChange={(e) => set('details', e.target.value)}
-            placeholder="Any extra wishes — specific patterns, occasions, references…"
+            placeholder="Lisätoiveet — erityiset kuviot, tilaisuudet, viitteet…"
             rows={3}
             className="w-full resize-none rounded-xl border border-pearl-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none placeholder:text-gray-300 transition-all duration-200 focus:border-blush-200 focus:ring-2 focus:ring-blush-100"
           />
@@ -139,7 +139,7 @@ export default function DesignForm() {
             />
           )}
           <span className="relative">
-            {loading ? 'Generating…' : 'Generate My Nail Designs'}
+            {loading ? 'Generoidaan…' : 'Generoi kynsidesignini'}
           </span>
         </button>
       </form>
@@ -182,7 +182,7 @@ function Section({
         </h2>
         {optional && (
           <span className="ml-1 rounded-full bg-pearl-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest text-gray-400">
-            Optional
+            Valinnainen
           </span>
         )}
       </div>

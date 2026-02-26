@@ -1,10 +1,10 @@
-const DECORATIONS = [
-  'Rhinestones',
-  'Glitter',
-  'Foil',
-  'Flowers',
-  'Geometric',
-  'Pearls',
+const DECORATIONS: { value: string; label: string }[] = [
+  { value: 'Rhinestones', label: 'Strassit' },
+  { value: 'Glitter',     label: 'Glitter' },
+  { value: 'Foil',        label: 'Foliointi' },
+  { value: 'Flowers',     label: 'Kukat' },
+  { value: 'Geometric',   label: 'Geometrinen' },
+  { value: 'Pearls',      label: 'Helmet' },
 ]
 
 interface Props {
@@ -22,10 +22,10 @@ export default function DecorationCheckboxes({ value, onChange }: Props) {
   return (
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
       {DECORATIONS.map((dec) => {
-        const checked = value.includes(dec)
+        const checked = value.includes(dec.value)
         return (
           <label
-            key={dec}
+            key={dec.value}
             className={[
               'flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition-all duration-200 select-none',
               checked
@@ -57,7 +57,7 @@ export default function DecorationCheckboxes({ value, onChange }: Props) {
               type="checkbox"
               className="sr-only"
               checked={checked}
-              onChange={() => toggle(dec)}
+              onChange={() => toggle(dec.value)}
             />
             <span
               className={[
@@ -65,7 +65,7 @@ export default function DecorationCheckboxes({ value, onChange }: Props) {
                 checked ? 'text-mauve-600' : 'text-gray-500',
               ].join(' ')}
             >
-              {dec}
+              {dec.label}
             </span>
           </label>
         )

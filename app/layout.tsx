@@ -15,14 +15,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Nail Studio — AI Design Generator',
+  title: 'Nails by Neea Dream Nails — Tekoälykynsidesignit',
   description:
-    'Describe your dream nail design and receive beautiful AI-generated examples, personalised to your vision.',
+    'Kuvaile unelmiesi kynsidesign ja saa kauniit tekoälygeneroidut esimerkit, räätälöitynä visioosi.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="fi" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-sans">{children}</body>
     </html>
   )

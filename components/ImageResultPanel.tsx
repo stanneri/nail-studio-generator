@@ -10,9 +10,9 @@ export default function ImageResultPanel({ images }: Props) {
   return (
     <div className="mt-12">
       <div className="mb-6 text-center">
-        <p className="font-serif text-xl text-mauve-600">Your Designs</p>
+        <p className="font-serif text-xl text-mauve-600">Sinun designisi</p>
         <p className="mt-1 text-sm text-gray-400">
-          Save your favourites for your next appointment
+          Tallenna suosikkisi seuraavaa käyntiäsi varten
         </p>
       </div>
 
@@ -42,7 +42,7 @@ function ImageCard({ url, index }: { url: string; index: number }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={url}
-          alt={`Generated nail design ${index}`}
+          alt={`Generoitu kynsidesign ${index}`}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           onLoad={() => setLoaded(true)}
         />
@@ -60,7 +60,7 @@ function ImageCard({ url, index }: { url: string; index: number }) {
           rel="noopener noreferrer"
           className="rounded-full border border-pearl-200 px-3 py-1.5 text-xs font-medium text-gray-500 transition-all duration-200 hover:border-blush-200 hover:bg-blush-50 hover:text-mauve-500"
         >
-          Save image
+          Tallenna kuva
         </a>
       </div>
     </div>
