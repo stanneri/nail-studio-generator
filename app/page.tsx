@@ -15,7 +15,7 @@ export default function Home() {
           </div>
 
           <p className="mb-2 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-mauve-400">
-            Tekoälykynsi-studio
+            Kynsien suunnittelu
           </p>
           <h1 className="font-serif text-4xl font-bold leading-tight text-mauve-700 sm:text-5xl">
             Nails by Neea Dream Nails
@@ -23,7 +23,7 @@ export default function Home() {
           <p className="mt-4 font-sans text-sm leading-relaxed text-gray-400 sm:text-base">
             Kuvaile visiosi — muoto, pituus, värit ja tyyli.
             <br className="hidden sm:block" />
-            Saat kaksi fotorealistista designia sekunneissa.
+            Saat haluamasi kynsidesignin sekunneissa.
           </p>
         </header>
 
@@ -31,13 +31,6 @@ export default function Home() {
         <div className="rounded-3xl border border-pearl-200 bg-white/80 p-6 shadow-sm shadow-pearl-200 backdrop-blur-sm sm:p-10">
           <DesignForm />
         </div>
-
-        {/* ── Footer ─────────────────────────────── */}
-        <footer className="mt-12 text-center">
-          <p className="text-xs text-gray-300">
-            Kuvat generoitu OpenAI DALL&middot;E 3:lla &nbsp;&bull;&nbsp; Powered by n8n
-          </p>
-        </footer>
 
       </div>
     </main>

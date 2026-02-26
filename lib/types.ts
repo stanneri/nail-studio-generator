@@ -4,8 +4,7 @@ export type NailStyle =
   | 'natural'
   | 'french'
   | 'ombre'
-  | 'solid'
-  | 'glitter'
+  | 'chrome'
   | 'nail art'
   | '3D nail art'
 

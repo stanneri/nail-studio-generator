@@ -1,10 +1,11 @@
 const DECORATIONS: { value: string; label: string }[] = [
-  { value: 'Rhinestones', label: 'Strassit' },
+  { value: 'Rhinestones', label: 'Timantit' },
   { value: 'Glitter',     label: 'Glitter' },
   { value: 'Foil',        label: 'Foliointi' },
   { value: 'Flowers',     label: 'Kukat' },
-  { value: 'Geometric',   label: 'Geometrinen' },
   { value: 'Pearls',      label: 'Helmet' },
+  { value: 'Shells',      label: 'Simpukat' },
+  { value: 'Bows',        label: 'Rusetit' },
 ]
 
 interface Props {

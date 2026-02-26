@@ -2,12 +2,11 @@ import { NailStyle } from '@/lib/types'
 
 const STYLES: { value: NailStyle; label: string; hint: string }[] = [
   { value: 'natural',     label: 'Luonnollinen',  hint: 'Minimalistinen' },
-  { value: 'french',      label: 'Ranska',        hint: 'Klassinen valk. kärki' },
+  { value: 'french',      label: 'Ranskis',       hint: 'Klassinen valk. kärki' },
   { value: 'ombre',       label: 'Ombre',         hint: 'Liukuväri' },
-  { value: 'solid',       label: 'Yksivärinen',   hint: 'Yksi väri' },
-  { value: 'glitter',     label: 'Glitter',       hint: 'Kimaltava pinta' },
+  { value: 'chrome',      label: 'Chrome',        hint: 'Metallinen kiilto' },
   { value: 'nail art',    label: 'Kynsitaide',    hint: 'Käsin maalattu' },
-  { value: '3D nail art', label: '3D-taide',      hint: 'Veistoksellinen' },
+  { value: '3D nail art', label: 'Kohokuviot',    hint: 'Veistoksellinen' },
 ]
 
 interface Props {

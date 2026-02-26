@@ -1,10 +1,9 @@
 import { NailShape } from '@/lib/types'
 
 const SHAPES: { value: NailShape; label: string; desc: string }[] = [
-  { value: 'square',   label: 'Neliö',    desc: 'Suora reuna' },
+  { value: 'square',   label: 'Square',   desc: 'Suora reuna' },
   { value: 'round',    label: 'Pyöreä',   desc: 'Pehmeä kaari' },
-  { value: 'oval',     label: 'Ovaali',   desc: 'Pitkänomainen' },
-  { value: 'almond',   label: 'Manteli',  desc: 'Kapeneva kärki' },
+  { value: 'almond',   label: 'Almond',   desc: 'Kapeneva kärki' },
   { value: 'stiletto', label: 'Stiletto', desc: 'Terävä kärki' },
   { value: 'coffin',   label: 'Coffin',   desc: 'Tasainen kärki' },
 ]
@@ -16,7 +15,7 @@ interface Props {
 
 export default function NailShapeSelector({ value, onChange }: Props) {
   return (
-    <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
+    <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
       {SHAPES.map((shape) => {
         const selected = value === shape.value
         return (

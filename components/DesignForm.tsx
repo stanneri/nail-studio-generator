@@ -10,7 +10,7 @@ import ImageResultPanel from './ImageResultPanel'
 import { NailDesignInput, NailShape, NailLength, NailStyle } from '@/lib/types'
 
 const INITIAL: NailDesignInput = {
-  shape: 'oval',
+  shape: 'round',
   length: 'medium',
   colors: '',
   style: 'ombre',
@@ -139,7 +139,7 @@ export default function DesignForm() {
             />
           )}
           <span className="relative">
-            {loading ? 'Generoidaan…' : 'Generoi kynsidesignini'}
+            {loading ? 'Generoidaan…' : 'Generoi kynsidesign'}
           </span>
         </button>
       </form>
