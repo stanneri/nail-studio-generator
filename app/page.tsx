@@ -25,6 +25,16 @@ export default function Home() {
             <br className="hidden sm:block" />
             Saat haluamasi kynsidesignin sekunneissa.
           </p>
+
+          <a
+            href="https://www.instagram.com/nailsbyneea_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-pearl-200 bg-white/60 px-4 py-2 text-xs font-medium text-gray-500 shadow-sm transition-all duration-200 hover:border-blush-200 hover:bg-white hover:text-mauve-500 hover:shadow-blush-100"
+          >
+            <Instagram />
+            @nailsbyneea_
+          </a>
         </header>
 
         {/* ── Card ───────────────────────────────── */}
@@ -34,6 +44,16 @@ export default function Home() {
 
       </div>
     </main>
+  )
+}
+
+function Instagram() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+    </svg>
   )
 }
 
